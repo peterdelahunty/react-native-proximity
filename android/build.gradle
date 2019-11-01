@@ -36,6 +36,6 @@ repositories {
 }
 
 dependencies {
-    api 'com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}'
+    api "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
 }
   

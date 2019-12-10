@@ -6,7 +6,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.facebook.react.bridge.Arguments;
@@ -39,7 +38,7 @@ public class RNProximityModule extends ReactContextBaseJavaModule implements Sen
     mProximity = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
   }
 
-  public void sendEvent(String eventName, @Nullable WritableMap params) {
+  public void sendEvent(String eventName, WritableMap params) {
     if (this.reactContext.hasActiveCatalystInstance()) {
       this.reactContext
               .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
